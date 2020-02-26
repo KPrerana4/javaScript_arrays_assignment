@@ -1,10 +1,8 @@
 function isReverse(list1, list2){
     let isEqual = false;
     if(list1.length == list2.length){
-        let temporaryList = list1;
         list1 = reverseTheList(list1);
         isEqual = areListsEqual(list1,list2);
-        list1 = temporaryList;
     }
     return isEqual;
 }
@@ -29,7 +27,8 @@ function areListsEqual(list1, list2)
     return true;
 }
 
-function main(){
+function main()
+{
     let list1=[1,2,3];
     let list2=[3,2,1];
     console.log("list1 = "+list1+"     list2 = "+list2);
