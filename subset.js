@@ -20,6 +20,7 @@ function count(list, searchingElement)
     return count;
 }
 
-console.log(isSubset([1,2,3],[1,2]));
-console.log(isSubset([1,2,2,3],[1,2,2]));
-console.log(isSubset([1,2,3],[1,4]));
+console.log(isSubset([1,2,3], [1,2]));
+console.log(isSubset([1,2,2,3], [1,2,2]));
+console.log(isSubset([1,2,3], [1,4]));
+console.log(isSubset([1,2,3], []));
