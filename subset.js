@@ -9,18 +9,18 @@ function isSubset(list1, list2)
     return true;
 }
 
-function count(list, searchingElement)
+function count(list, element)
 {
     let count = 0;
-    for(let element of list)
+    for(let index = 0; index < list.length; index++)
     {
-        if(element == searchingElement)
+        if(list[index] == element)
             count++;
     }
     return count;
 }
 
-console.log(isSubset([1,2,3], [1,2]));
-console.log(isSubset([1,2,2,3], [1,2,2]));
-console.log(isSubset([1,2,3], [1,4]));
-console.log(isSubset([1,2,3], []));
+console.log("isSubset([1,2,3], [1,2]) = " + isSubset([1,2,3], [1,2]));
+console.log("isSubset([1,2,2,3], [1,2,2]) = " + isSubset([1,2,2,3], [1,2,2]));
+console.log("isSubset([1,2,3], [1,4]) = " + isSubset([1,2,3], [1,4]));
+console.log("isSubset([1,2,3], []) = " + isSubset([1,2,3], []));
