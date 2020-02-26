@@ -22,3 +22,4 @@ function count(list, element)
 
 console.log("isDistinct([1,2,3]) = " + isDistinct([1,2,3]));
 console.log("isDistinct([1,2,3,1]) = " + isDistinct([1,2,3,1]));
+console.log("isDistinct([]) = " + isDistinct([]));
