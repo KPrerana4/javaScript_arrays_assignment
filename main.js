@@ -40,6 +40,16 @@ function main()
     list2=[2,1,3];
     console.log("areEqual(list1,list2) = " + functions.areListsEqual(list1,list2));
     console.log("areEqual(list2,list1) = " + functions.areListsEqual(list2,list1));
+
+    console.log("\nis Same Set");
+    list1=[1,2,3];
+    list2=[1,3,2];
+    console.log("isSameSet(list1,list2)" + functions.isSameSet(list1,list2));
+    console.log("isSameSet(list1,list2)" + functions.isSameSet(list1,list2));
+    list1=[1,2,3];
+    list2=[2,1,3,4];
+    console.log("isSameSet(list1,list2)" + functions.isSameSet(list1,list2));
+    console.log("isSameSet(list1,list2)" + functions.isSameSet(list1,list2));
 }
 
 main();
