@@ -89,4 +89,16 @@ function areListsEqual(list1, list2)
     return true;
 }
 
-module.exports = {unionLists, intersectionOfLists, isSubset, isReverse, difference, areListsEqual};
+function isSameSet(list1, list2)
+{
+    if(list1.length != list2.length)return false;
+    for(let element of list1)
+    {
+        if(count(list1, element) != count(list2, element)){
+            return false;
+        }
+    }
+    return true;
+}
+
+module.exports = {unionLists, intersectionOfLists, isSubset, isReverse, difference, areListsEqual, isSameSet};
