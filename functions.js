@@ -101,4 +101,32 @@ function isSameSet(list1, list2)
     return true;
 }
 
-module.exports = {unionLists, intersectionOfLists, isSubset, isReverse, difference, areListsEqual, isSameSet};
+function range(startValue,endValue,step = 1)
+{
+    if(step == 0){
+        return [startValue];
+    }
+    if(step > 0){
+        return rangeForPositiveStep(startValue, endValue, step);
+    }
+    return rangeForNegativeStep(startValue, endValue, step);
+}
+
+function rangeForPositiveStep(startValue, endValue, step)
+{
+     let values = [];
+     for(let value = startValue; value < endValue; value += step){
+        values.push(value);
+     }
+     return values;
+}
+
+function rangeForNegativeStep(startValue, endValue, step)
+{
+     let values = [];
+     for(let value = startValue; value > endValue; value += step){
+        values.push(value);
+     }
+     return values;
+}
+module.exports = {unionLists, intersectionOfLists, isSubset, isReverse, difference, areListsEqual, isSameSet, range};
