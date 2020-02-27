@@ -50,6 +50,12 @@ function main()
     list2=[2,1,3,4];
     console.log("isSameSet(list1,list2)" + functions.isSameSet(list1,list2));
     console.log("isSameSet(list1,list2)" + functions.isSameSet(list1,list2));
+
+    console.log("\nRange");
+    console.log("range(1,5) = " + functions.range(1,5));
+    console.log("range(1,10,2) = " + functions.range(1,10,2));
+    console.log("range(5,0,-1) = " + functions.range(5,0,-1));
+    console.log("range(100,1) = " + functions.range(100,1));
 }
 
 main();
