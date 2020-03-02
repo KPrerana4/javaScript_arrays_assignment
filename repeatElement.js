@@ -1,11 +1,7 @@
 function repeatElement(element, n)
 {
-    let list = [];
-    while(list.length != n)
-    {
-        list.push(element);
-    }
-    return list;
+    let list = new Array(n);
+    return list.fill(element);
 }
 
 console.log("repeatElement('a',4) = " + repeatElement('a',4));
