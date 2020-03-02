@@ -1,24 +1,19 @@
 function isSameSet(list1, list2)
 {
-    if(list1.length != list2.length)return false;
-    for(let element of list1)
+    if(list1.length == list2.length)
     {
-        if(count(list1, element) != count(list2, element)){
-            return false;
-        }
+        return list1.every(function(element){
+                return count(list1, element) == count(list2, element);
+        },list2);
     }
-    return true;
+    return false;
 }
 
 function count(list, element)
 {
-    let count = 0;
-    for(let index = 0; index < list.length; index++)
-    {
-        if(list[index] == element)
-            count++;
-    }
-    return count;
+    return list.filter(function(member){
+            return element == member;
+    },element).length;
 }
 
 console.log("isSameSet([1,2,3],[1,3,2]) = " + isSameSet([1,2,3],[1,3,2]));
