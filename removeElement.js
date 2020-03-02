@@ -1,12 +1,8 @@
 function removeElement(list, element)
 {
-    let newList = [];
-    for(let index = 0; index < list.length; index++){
-        if(list[index] != element){
-            newList.push(list[index]);
-        }
-    }
-    return newList;
+    return list.filter(function(member){
+        return !(member == element);
+    });
 }
 
 console.log("list : " + [1,2,3,4,5,1,1,2]);
