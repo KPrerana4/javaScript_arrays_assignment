@@ -1,11 +1,11 @@
 function areListsEqual(list1, list2)
 {
-    for(let index = 0; index < list1.length; index++){
-        if(list1[index] != list2[index]){
-            return false;
-        }
+    if(list1.length == list2.length){
+        return list1.every(function(element,index){
+            return element == list2[index];
+        },list2);
     }
-    return true;
+    return false;
 }
 
 function main()
